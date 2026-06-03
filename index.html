@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kyran & R · 8 Bulan yang Mengukir Rasa</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fef8f0;
+            background-image: radial-gradient(circle at 10% 25%, rgba(255, 215, 170, 0.2) 1.8%, transparent 2.2%);
+            background-size: 48px 48px;
+            font-family: 'Inter', sans-serif;
+            color: #2c1f15;
+            scroll-behavior: smooth;
+        }
+
+        .story-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* hero + foto Kyran */
+        .hero-section {
+            background: #fffbf5;
+            border-radius: 56px;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 20px 35px -12px rgba(80, 50, 25, 0.12);
+            border: 1px solid #ffe3c6;
+        }
+
+        .photo-frame {
+            max-width: 270px;
+            margin: 0 auto 1.2rem;
+            background: linear-gradient(135deg, #fff0e2, #ffe1ca);
+            border-radius: 52px;
+            padding: 8px;
+            box-shadow: 0 15px 20px -8px rgba(0,0,0,0.15);
+        }
+
+        .kyran-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 46px;
+            display: block;
+            border: 4px solid white;
+            background: #eedac8;
+        }
+
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #bc6a37, #e28d4b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .subhead {
+            background: #f5ece2;
+            display: inline-block;
+            padding: 0.3rem 1.4rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #b77144;
+            margin-top: 10px;
+        }
+
+        .quote-opening {
+            background: #fff6ee;
+            border-left: 5px solid #e7b27d;
+            padding: 1.2rem 1.8rem;
+            border-radius: 28px;
+            margin: 1rem 0 2rem;
+            font-style: italic;
+            font-size: 1rem;
+            color: #654b34;
+        }
+
+        /* cerita panjang */
+        .long-story {
+            background: #fffffff5;
+            border-radius: 2rem;
+            padding: 2rem 2rem;
+            box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ffe6cf;
+            line-height: 1.7;
+        }
+
+        .chapter {
+            margin-bottom: 2.2rem;
+        }
+
+        .chapter h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #aa5f34;
+            border-left: 5px solid #f4bc86;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .chapter p {
+            font-size: 1.02rem;
+            margin-bottom: 1rem;
+            color: #3e2b1c;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #faead9 0%, #faead9 40%, transparent 70%);
+            padding: 0 0.2rem;
+            font-weight: 500;
+            color: #bd6d3c;
+        }
+
+        .date-tag {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #cb8757;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            border-bottom: 1px dashed #f2d2b5;
+            letter-spacing: 0.3px;
+        }
+
+        .divider-custom {
+            height: 2px;
+            background: linear-gradient(90deg, #f7ddc0, #fef3e8, #f7ddc0);
+            margin: 1.8rem 0;
+        }
+
+        .epilog {
+            margin-top: 1.2rem;
+            background: #fef5ec;
+            padding: 1.2rem 1.5rem;
+            border-radius: 28px;
+            font-style: normal;
+            border: 1px solid #ffdebf;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #c28f66;
+            border-top: 1px solid #f7e2ce;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 680px) {
+            .story-container {
+                padding: 1rem;
+            }
+            .long-story {
+                padding: 1.2rem;
+            }
+            .chapter h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="story-container">
+    <!-- Hero: Foto Kyran (cewe) -->
+    <div class="hero-section">
+        <div class="photo-frame">
+            <img class="kyran-img" src="1000561086.jpg" alt="Kyran - kenangan manis" onerror="this.onerror=null; this.src='https://placehold.co/500x500/f5e2d0/b67a48?text=Kyran';">
+        </div>
+        <h1>Kyran & <span style="background: #fbe6d4; padding: 0 8px; border-radius: 50px;">R</span></h1>
+        <div class="subhead"><i class="fas fa-hourglass-half"></i> 8 bulan · cerita tentang seorang kakak kelas yang mengubah segalanya</div>
+    </div>
+
+    <!-- kutipan pembuka -->
+    <div class="quote-opening">
+        <i class="fas fa-feather-alt" style="margin-right: 8px; color:#d68f58;"></i> 
+        Terkadang, seseorang hadir bukan untuk tinggal selamanya, tapi untuk meninggalkan jejak yang tak pernah pudar. Bagi Kyran, sosok kakak kelas yang dipanggil <span class="highlight">R</span> adalah jejak itu — delapan bulan yang mengisi setiap sudut masa SMP-nya.
+    </div>
+
+    <!-- Cerita panjang 8 bulan, hanya nama cewe Kyran, cowo dipanggil R -->
+    <div class="long-story">
+        <div class="chapter">
+            <div class="date-tag"><i class="far fa-calendar-alt"></i> Awal Agustus · Pertemuan tak terduga</div>
+            <h2>🌤️ Lorong sekolah yang berubah jadi takdir</h2>
+            <p>Hari pertama masuk semester ganjil, langit tampak kelabu. Kyran, siswi baru kelas 7 yang masih canggung dengan peta sekolah, tersesat di lorong belakang dekat laboratorium biologi. Tasnya terlalu berat, dan matanya mulai berkaca-kaca karena takut terlambat. Saat itulah seorang kakak kelas lewat. Tingginya sedikit di atas rata-rata, jaket almamater lusuh, wajahnya teduh namun misterius. Ia hanya tersenyum kecil dan bertanya, <span class="highlight">“Perlu bantuan, dik?”</span> Suaranya tenang, tidak terlalu dalam tapi menenangkan. Kyran hanya mengangguk, gugup. Kakak kelas itu memperkenalkan diri singkat, “Panggil saja <span class="highlight">R</span>.” Sejak hari itu, Kyran tak pernah lagi tersesat di lorong sekolah. R selalu menjemputnya di gerbang setiap pagi, hanya untuk berjalan bersama menuju kelas Kyran. </p>
+            <p>R adalah kakak kelas dari 11 IPS, dikenal pendiam tapi disegani. Namun di depan Kyran, ia menjadi lebih banyak bicara. Kyran yang pemalu perlahan mulai merasa nyaman. Mereka bertukar nomor telepon dengan alasan “kalau ada PR yang sulit”. Padahal Kyran sadar, setiap malam mereka selalu mengirim pesan tentang hal-hal receh: rekomendasi lagu, cuaca besok, atau sekadar keluhan tentang tugas.</p>
+        </div>
+
+        <div class="divider-custom"></div>
+
+        <div class="chapter">
+            <div class="date-tag"><i class="far fa-calendar-alt"></i> September – Oktober · Kedekatan yang merambat</div>
+            <h2>📚 Sore di perpustakaan dan segelas susu jahe</h2>
+            <p>Memasuki bulan kedua, Kyran dan R memiliki rutinitas rahasia: setiap Selasa dan Kamis sore, mereka duduk di pojok perpustakaan favorit. R mengerjakan tugas makalah, Kyran membaca novel atau mengerjakan PR Matematika. <span class="highlight">Keheningan mereka terasa hangat.</span> R selalu membawakan Kyran segelas susu jahe dari kantin — minuman yang Kyran sukai karena bisa menghangatkan tenggorokan. Kyran membalas dengan sebatang cokelat kecil yang ia siapkan dari uang jajannya. Mereka jarang bicara banyak, tapi entah mengapa Kyran merasa setiap detak jam di perpustakaan adalah musik. </p>
+            <p>Di suatu sore hujan deras, Kyran lupa payung. R dengan sigap memayunginya hingga ke halte bus. “Jangan sakit, Kyran,” bisik R. Kyran hanya bisa tersenyum meski jantungnya berdebar tak karuan. Sejak hari itu, Kyran sadar ia mulai merasakan sesuatu yang lebih dari sekadar rasa kagum kepada seorang senior.</p>
+        </div>
+
+        <div class="divider-custom"></div>
+
+        <div class="chapter">
+            <div class="date-tag"><i class="far fa-calendar-alt"></i> November – Desember · Liburan yang merekatkan rasa</div>
+            <h2>☕ Cokelat panas di kafe tua & langit malam penuh bintang</h2>
+            <p>Liburan panjang tiba, namun komunikasi Kyran dan R justru semakin intens. Mereka berkirim pesan setiap hari, kadang panggilan suara hingga larut malam. Kyran tahu R bercita-cita kuliah di fakultas hukum, sementara Kyran diam-diam mulai tertarik pada jurnalistik karena terinspirasi dari cara R bercerita. Di pertengahan Desember, mereka janjian bertemu di kafe tua dekat sekolah. Di sana, untuk pertama kalinya R bercerita panjang tentang masa kecilnya, tentang kekhawatirannya menjadi kakak kelas yang baik. Kyran mendengarkan dengan seksama, sesekali menawarkan tawa renyah. “Kamu pendengar yang baik, Kyran,” puji R. Kyran tersipu, menunduk sambil memeluk gelas cokelat panasnya.</p>
+            <p>Malam tahun baru, R mengajak Kyran melihat kembang api dari atas bukit kecil di belakang kota. Mereka duduk bersebelahan, jarak cukup dekat hingga Kyran bisa mencium wangi sabun dari jaket R. “Tahun depan, aku harap kamu makin percaya diri, Ran,” ucap R lirih. Kyran mengangguk, hatinya sesak oleh rasa hangat yang tak bisa ia jelaskan. Di tengah dentuman warna-warni, Kyran hampir berbisik, tapi urung. Delapan bulan masih panjang, pikirnya.</p>
+        </div>
+
+        <div class="divider-custom"></div>
+
+        <div class="chapter">
+            <div class="date-tag"><i class="far fa-calendar-alt"></i> Januari · Ujian dan jarak yang mengajarkan arti rindu</div>
+            <h2>📖 Selimut rindu di sela kesibukan</h2>
+            <p>Memasuki Januari, R mulai sibuk dengan persiapan ujian tengah semester dan kegiatan OSIS. Mereka bertemu lebih jarang, hanya sesekali di lorong sekolah dengan salaman singkat. Kyran merasa ada yang kosong. <span class="highlight">Hari-hari tanpa pesan dari R terasa hambar.</span> Kyran sempat mengira R mulai menjauh. Namun suatu pagi, R muncul di depan kelas Kyran dengan wajah sedikit lelah. Ia menyerahkan sebuah kotak kecil berisi teh hangat dan sebatang cokelat. “Maaf aku sibuk. Tapi aku tidak pernah lupa sama kamu, Kyran.” Kata-kata itu sederhana, namun cukup membuat Kyran tersenyum seharian. R mungkin tidak tahu, tapi baginya, momen itu adalah obat penat.</p>
+        </div>
+
+        <div class="divider-custom"></div>
+
+        <div class="chapter">
+            <div class="date-tag"><i class="far fa-calendar-alt"></i> Februari – Maret · Puncak kedekatan & rahasia kecil</div>
+            <h2>🎸 Lagu lama di atap sekolah dan akhir 8 bulan</h2>
+            <p>Memasuki bulan ke tujuh hingga delapan, ikatan Kyran dan R semakin kuat. R mengajari Kyran bermain gitar sederhana, meski Kyran selalu salah memegang kunci. Mereka sering menghabiskan waktu istirahat di taman belakang, berbagi cerita tentang mimpi. <span class="highlight">R mengakui bahwa Kyran adalah adik kelas favoritnya</span> — bukan karena apa pun, tapi karena Kyran selalu bisa membuat R merasa jadi diri sendiri. Kyran memendam rasa sayang yang lebih dalam, namun memilih untuk menikmati setiap detak waktu bersama.</p>
+            <p>Di minggu terakhir Maret, R mendapat kabar bahwa keluarganya akan pindah ke luar kota karena pekerjaan ayahnya. Berita itu jatuh seperti bom di hati Kyran. Dalam diam, ia mencoba tersenyum, mendukung keputusan R. Sebelum perpisahan, mereka bertemu di tempat pertama kali bertemu: lorong belakang dekat lab biologi. R menyerahkan sebuah buku catatan bermotif biru. Di halaman pertama tertulis: <span class="highlight">“Untuk Kyran, terima kasih sudah menjadi warna dalam 8 bulan terakhirku. Jangan pernah berhenti bersinar.”</span> Kyran menangis tanpa suara, lalu R mengusap lembut kepalanya. Mereka berpelukan singkat — cukup lama untuk Kyran menghafal hangatnya pelukan itu.</p>
+        </div>
+
+        <div class="divider-custom"></div>
+
+        <div class="epilog">
+            <div class="date-tag"><i class="fas fa-bookmark"></i> Epilog · Setelah R pergi</div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌼 Kenangan yang abadi</h2>
+            <p>Kini, Kyran duduk di kelas 8. Ia tidak lagi tersesat di lorong sekolah. Setiap kali melewati perpustakaan, taman belakang, atau kafe tua itu, ia selalu tersenyum. R sudah tidak di sekolah itu, tapi jejaknya tetap ada. Kyran menyimpan semua kenangan: foto langit senja, nota cokelat bekas, dan buku catatan biru yang selalu ia bawa ke mana-mana. <span class="highlight">Delapan bulan bersama R mengajarkan Kyran bahwa kedekatan tidak selalu berujung pada status, tetapi tentang bagaimana seseorang hadir dan membuatmu menjadi lebih baik.</span> Kyran tidak tahu apakah mereka akan bertemu lagi. Tapi satu hal yang pasti, dalam ingatan Kyran, R adalah kakak kelas yang mengisi masa remajanya dengan kehangatan yang tak tergantikan. Terima kasih, R — untuk delapan bulan yang terasa seumur hidup.</p>
+            <p style="margin-top: 1rem; text-align: center; font-style: italic;">“Dan di setiap lorong yang kulewati, ada bayangmu yang tersenyum — mengingatkanku bahwa pernah ada seseorang yang membuat sekolah terasa seperti rumah.” — Kyran</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <i class="fas fa-star-of-life" style="color:#cb8553;"></i> Kisah Kyran & R · 8 bulan yang terukir indah <i class="fas fa-heart" style="color:#c28558;"></i>
+    </div>
+</div>
+</body>
+</html>
